@@ -756,11 +756,14 @@ footer {
   #broker-banner {
     position: fixed;
     left: 0; right: 0;
+    top: 0;
     background: var(--accent);
     color: var(--stone);
     z-index: 99;
-    transform: translateY(-110%);
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
     padding: 0.65rem 3rem;
     display: flex;
     align-items: center;
@@ -773,6 +776,8 @@ footer {
     border-bottom: 1px solid rgba(184, 150, 90, 0.25);
   }
   #broker-banner.visible {
+    opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
   #broker-banner a {
