@@ -751,6 +751,65 @@ footer {
 
   .hero-scroll { display: none; }
 }
+
+  /* ── Broker Banner ── */
+  #broker-banner {
+    position: fixed;
+    left: 0; right: 0;
+    background: var(--accent);
+    color: var(--stone);
+    z-index: 99;
+    transform: translateY(-110%);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0.65rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(184, 150, 90, 0.25);
+  }
+  #broker-banner.visible {
+    transform: translateY(0);
+  }
+  #broker-banner a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 150, 90, 0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  #broker-banner a:hover {
+    border-color: var(--gold);
+  }
+  #broker-banner-dismiss {
+    position: absolute;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: var(--slate);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: color 0.2s;
+  }
+  #broker-banner-dismiss:hover {
+    color: var(--stone);
+  }
+  @media (max-width: 768px) {
+    #broker-banner {
+      padding: 0.65rem 2.5rem 0.65rem 1.25rem;
+      font-size: 0.7rem;
+      text-align: center;
+    }
+    #broker-banner-dismiss {
+      right: 0.75rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -773,6 +832,12 @@ footer {
     <span></span><span></span><span></span>
   </div>
 </nav>
+<!-- Broker Banner -->
+<div id="broker-banner" role="banner" aria-label="Broker partnership notice">
+  <span>Are you a broker?&nbsp; I partner with commercial brokers on market research and space survey decks. &nbsp;<a href="https://spacesurveylabs.com" target="_blank" rel="noopener">Space Survey Labs →</a></span>
+  <button id="broker-banner-dismiss" aria-label="Dismiss banner">✕</button>
+</div>
+
 
 <!-- HERO -->
 <section class="hero" id="hero">
@@ -1249,6 +1314,38 @@ contactForm.addEventListener('submit', async (e) => {
   }
 });
 </script>
+
+
+  // ── Broker Banner ──
+  (function() {
+    var banner = document.getElementById('broker-banner');
+    var dismiss = document.getElementById('broker-banner-dismiss');
+    var nav = document.querySelector('nav');
+    var dismissed = false;
+
+    function positionBanner() {
+      if (nav) banner.style.top = nav.offsetHeight + 'px';
+    }
+
+    function onScroll() {
+      if (dismissed) return;
+      if (window.scrollY > 300) {
+        banner.classList.add('visible');
+      } else {
+        banner.classList.remove('visible');
+      }
+      positionBanner();
+    }
+
+    dismiss.addEventListener('click', function() {
+      dismissed = true;
+      banner.classList.remove('visible');
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', positionBanner);
+    positionBanner();
+  })();
 
 </body>
 </html>
