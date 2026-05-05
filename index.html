@@ -815,6 +815,24 @@ footer {
       right: 0.75rem;
     }
   }
+
+  /* ── Service learn-more link ── */
+  .service-learn-more {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184,150,90,0.3);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .service-learn-more:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
 </style>
 </head>
 <body>
@@ -831,6 +849,7 @@ footer {
     <a href="#markets">Markets</a>
     <a href="#deals">Portfolio</a>
     <a href="#testimonials">Testimonials</a>
+    <a href="tenant-rep">Tenant Rep</a>
     <a href="#contact" class="nav-cta">Get in Touch</a>
   </div>
   <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
@@ -932,6 +951,7 @@ footer {
         <span class="market-tag">New York</span>
         <span class="market-tag">California</span>
       </div>
+      <a href="tenant-rep" class="service-learn-more">Learn more about tenant representation →</a>
     </div>
     <div class="service-card fade-in">
       <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -944,6 +964,7 @@ footer {
         <span class="market-tag">New York</span>
         <span class="market-tag">California</span>
       </div>
+      <a href="tenant-rep" class="service-learn-more">Learn more about buyer representation →</a>
     </div>
     <div class="service-card fade-in">
       <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
