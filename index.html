@@ -833,6 +833,56 @@ footer {
     color: var(--gold);
     border-color: var(--gold);
   }
+
+  /* ── Tenant Rep Callout Band ── */
+  .tenrep-callout {
+    background: var(--accent);
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .tenrep-callout-text h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--paper);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .tenrep-callout-text p {
+    font-size: 0.9rem;
+    color: rgba(245,242,237,0.5);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+  .tenrep-callout-cta {
+    flex-shrink: 0;
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(184,150,90,0.5);
+    color: var(--gold-light);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+  }
+  .tenrep-callout-cta:hover {
+    background: rgba(184,150,90,0.1);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  @media (max-width: 768px) {
+    .tenrep-callout {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3rem 1.5rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -951,7 +1001,6 @@ footer {
         <span class="market-tag">New York</span>
         <span class="market-tag">California</span>
       </div>
-      <a href="tenant-rep" class="service-learn-more">Learn more about tenant representation →</a>
     </div>
     <div class="service-card fade-in">
       <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -964,7 +1013,6 @@ footer {
         <span class="market-tag">New York</span>
         <span class="market-tag">California</span>
       </div>
-      <a href="tenant-rep" class="service-learn-more">Learn more about buyer representation →</a>
     </div>
     <div class="service-card fade-in">
       <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -981,6 +1029,15 @@ footer {
     </div>
   </div>
 </section>
+<!-- TENANT REP CALLOUT -->
+<div class="tenrep-callout">
+  <div class="tenrep-callout-text">
+    <h3>Looking for space? I represent you exclusively.</h3>
+    <p>Conflict-free tenant and buyer representation across New York City and California — from market search through lease execution, at no cost to you.</p>
+  </div>
+  <a href="tenant-rep" class="tenrep-callout-cta">Tenant &amp; Buyer Representation →</a>
+</div>
+
 
 <!-- MARKETS -->
 <section class="markets" id="markets">
