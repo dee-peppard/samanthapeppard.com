@@ -251,34 +251,92 @@ section { padding: 7rem 3rem; }
 .services-dark .section-tag { color: var(--gold-light); }
 .services-dark .section-title { color: var(--paper); }
 .services-dark .section-subtitle { color: rgba(245,242,237,0.5); }
-.pillars-grid {
-  max-width: 1200px; margin: 4rem auto 0;
-  display: grid; grid-template-columns: repeat(3, 1fr);
+
+/* ── TIMELINE ── */
+.timeline {
+  max-width: 900px; margin: 5rem auto 0;
+  position: relative;
+  padding: 0 0 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(184,150,90,0.3) 5%, rgba(184,150,90,0.3) 95%, transparent);
+  transform: translateX(-50%);
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
   gap: 0;
+  margin-bottom: 3.5rem;
+  position: relative;
 }
-.pillar-card {
-  padding: 2.5rem;
-  border: 1px solid rgba(245,242,237,0.06);
-  transition: background 0.4s;
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item:nth-child(odd) { flex-direction: row; }
+.timeline-item:nth-child(even) { flex-direction: row-reverse; }
+
+.timeline-content {
+  width: calc(50% - 2.5rem);
+  padding: 2rem 2rem;
+  border: 1px solid rgba(245,242,237,0.07);
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s, background 0.3s;
 }
-.pillar-card:hover { background: rgba(245,242,237,0.03); }
-.pillar-icon {
-  width: 36px; height: 36px;
-  margin-bottom: 1.5rem;
-  opacity: 0.35;
+.timeline-content:hover {
+  border-color: rgba(184,150,90,0.25);
+  background: rgba(255,255,255,0.04);
 }
-.pillar-card h3 {
+.timeline-item:nth-child(odd) .timeline-content { margin-right: auto; text-align: right; }
+.timeline-item:nth-child(even) .timeline-content { margin-left: auto; text-align: left; }
+
+.timeline-node {
+  position: absolute;
+  left: 50%; top: 1.75rem;
+  transform: translateX(-50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.7;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(184,150,90,0.25);
+}
+.timeline-content h3 {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: var(--paper);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
 }
-.pillar-card p {
+.timeline-content p {
   font-size: 0.85rem;
   color: rgba(245,242,237,0.45);
   line-height: 1.85;
   font-weight: 300;
+}
+.timeline-icon {
+  width: 28px; height: 28px;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+.timeline-item:nth-child(odd) .timeline-icon { margin-left: auto; }
+
+@media (max-width: 768px) {
+  .timeline::before { left: 1.25rem; }
+  .timeline-item,
+  .timeline-item:nth-child(even) { flex-direction: column; padding-left: 3rem; }
+  .timeline-node { left: 1.25rem; top: 1.5rem; }
+  .timeline-content { width: 100%; text-align: left !important; }
+  .timeline-icon { margin-left: 0 !important; }
 }
 
 /* ── PROCESS ── */
