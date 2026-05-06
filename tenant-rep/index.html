@@ -516,6 +516,45 @@ footer {
   .footer-legal { text-align: center; }
   .footer-logo { align-items: center; }
 }
+
+  /* ── Markets Band ── */
+  .markets-band {
+    background: var(--warm-white);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .markets-band-item {
+    text-align: center;
+  }
+  .markets-band-city {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.3rem;
+  }
+  .markets-band-detail {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 400;
+  }
+  .markets-band-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--divider);
+  }
+  @media (max-width: 768px) {
+    .markets-band { gap: 2rem; padding: 2rem 1.5rem; }
+    .markets-band-city { font-size: 1.4rem; }
+  }
 </style>
 </head>
 <body>
@@ -543,12 +582,25 @@ footer {
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <p class="hero-tag">Tenant &amp; Buyer Representation</p>
+    <p class="hero-tag">Tenant &amp; Buyer Representation &nbsp;·&nbsp; New York City &nbsp;·&nbsp; Santa Barbara</p>
     <h1>Your Advocate<br>in Every Transaction</h1>
-    <p>The landlord's broker works for the landlord. I work exclusively for you — with undivided loyalty, deep market intelligence, and a track record of securing terms that protect your business for years to come.</p>
+    <p>The landlord's broker works for the landlord. I work exclusively for you — with undivided loyalty, deep market intelligence, and a track record of securing terms that protect your business for years to come. Active in New York City and Santa Barbara.</p>
     <a href="https://samanthapeppard.com/#contact" class="hero-cta">Start the Conversation</a>
   </div>
 </section>
+
+<!-- MARKETS BAND -->
+<div class="markets-band">
+  <div class="markets-band-item">
+    <div class="markets-band-city">New York City</div>
+    <div class="markets-band-detail">Manhattan · Brooklyn · Outer Boroughs</div>
+  </div>
+  <div class="markets-band-divider"></div>
+  <div class="markets-band-item">
+    <div class="markets-band-city">Santa Barbara</div>
+    <div class="markets-band-detail">Santa Barbara · Greater Southern California</div>
+  </div>
+</div>
 
 <!-- WHY SECTION -->
 <section class="why">
@@ -754,7 +806,7 @@ footer {
 <section class="cta-section">
   <span class="section-tag">Work With Me</span>
   <h2 class="section-title">Ready to Find<br>Your Next Space?</h2>
-  <p>Whether you're relocating, expanding, or navigating a renewal, I'd welcome the opportunity to discuss how exclusive representation can change the outcome of your transaction.</p>
+  <p>Whether you're relocating, expanding, or navigating a renewal in New York City or Santa Barbara, I'd welcome the opportunity to discuss how exclusive representation can change the outcome of your transaction.</p>
   <a href="https://samanthapeppard.com/#contact" class="cta-button">Get in Touch</a>
 </section>
 
@@ -765,6 +817,7 @@ footer {
     <span class="footer-logo-last">Peppard</span>
   </div>
   <div class="footer-legal">
+    <span style="display:block; color:rgba(245,242,237,0.45); margin-bottom:0.6rem; font-size:0.78rem; letter-spacing:0.02em;">Information on this website is for general informational purposes only, subject to change, and does not constitute legal or financial advice.</span>
     &copy; 2026 Samantha Peppard. All rights reserved.<br>
     Samantha D. Peppard — Licensed Real Estate Broker, New York (License #10351220408)<br>
     Samantha D. Peppard — Licensed Real Estate Salesperson, Premier Agent Network, California (License #02424790)
