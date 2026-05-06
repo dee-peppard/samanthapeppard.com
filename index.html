@@ -883,6 +883,54 @@ footer {
       padding: 3rem 1.5rem;
     }
   }
+  /* ── Santa Barbara Market Callout ── */
+  .sb-market-callout {
+    background: var(--warm-white);
+    border-top: 1px solid var(--divider);
+  }
+  .sb-market-callout-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .sb-market-eyebrow {
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.65rem;
+  }
+  .sb-market-callout-text h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-weight: 300; color: var(--ink);
+    margin-bottom: 0.6rem; line-height: 1.25;
+  }
+  .sb-market-callout-text p {
+    font-size: 0.95rem; color: var(--slate);
+    font-weight: 300; max-width: 520px; line-height: 1.75;
+  }
+  .sb-market-callout-btn {
+    flex-shrink: 0;
+    display: inline-block;
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-family: var(--font-body); font-weight: 400;
+    color: var(--ink); background: var(--gold);
+    padding: 1rem 2.2rem; text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
+  .sb-market-callout-btn:hover { background: var(--gold-light); }
+  @media (max-width: 768px) {
+    .sb-market-callout-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3rem 1.5rem;
+      gap: 2rem;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1062,6 +1110,17 @@ footer {
         <h3>California</h3>
         <p>Active in Los Angeles, Santa Barbara, and the broader Southern California market. Commercial leasing, acquisitions, and property management for the West Coast.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="sb-market-callout fade-in">
+    <div class="sb-market-callout-inner">
+      <div class="sb-market-callout-text">
+        <p class="sb-market-eyebrow">Santa Barbara Market</p>
+        <h3>Q1 2026 market conditions across office, retail &amp; industrial</h3>
+        <p>Santa Barbara County continues to see tight vacancy, strong rents, and limited new supply across all asset classes. Explore the latest data by submarket.</p>
+      </div>
+      <a href="santa-barbara-ca" class="sb-market-callout-btn">View Santa Barbara Market Report →</a>
     </div>
   </div>
 </section>
