@@ -381,6 +381,92 @@ section { padding: 6rem 3rem; }
   display: block;
 }
 
+
+/* ── SPOTLIGHT / FEATURED ── */
+.spotlight-section { background: var(--warm-white); }
+.spotlight-inner { max-width: 1100px; margin: 0 auto; }
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.spotlight-card {
+  background: var(--paper);
+  border: 1px solid var(--divider);
+  overflow: hidden;
+}
+.spotlight-card-alt {
+  background: var(--accent);
+  border-color: transparent;
+}
+
+.spotlight-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.spotlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.spotlight-card:hover .spotlight-img { transform: scale(1.03); }
+
+.spotlight-card-body {
+  padding: 2rem 2rem 2.5rem;
+}
+.spotlight-eyebrow {
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.75rem;
+}
+.spotlight-card-alt .spotlight-eyebrow { color: var(--gold); }
+
+.spotlight-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem; font-weight: 300;
+  color: var(--ink); margin-bottom: 1rem;
+  line-height: 1.2; letter-spacing: 0.01em;
+}
+.spotlight-card-alt .spotlight-card-body h3 { color: var(--paper); }
+
+.spotlight-card-body p {
+  font-size: 0.9rem; color: var(--slate);
+  line-height: 1.8; margin-bottom: 1rem;
+  font-weight: 300;
+}
+.spotlight-card-body p:last-of-type { margin-bottom: 1.5rem; }
+.spotlight-card-alt .spotlight-card-body p { color: rgba(245,242,237,0.6); }
+
+.spotlight-link {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; font-weight: 400;
+  border-bottom: 1px solid rgba(184,150,90,0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.spotlight-link:hover { border-color: var(--gold); }
+
+.spotlight-tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.spotlight-tag {
+  font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(245,242,237,0.5);
+  border: 1px solid rgba(245,242,237,0.15);
+  padding: 0.35rem 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .spotlight-grid { grid-template-columns: 1fr; }
+}
+
 /* ── WORKING WITH ME ── */
 .cta-section {
   background: var(--accent);
@@ -917,6 +1003,49 @@ footer {
           <!-- Scale bar area / map label -->
           <text x="20" y="410" font-family="Outfit, sans-serif" font-size="8" fill="rgba(10,10,10,0.3)" letter-spacing="1">SANTA BARBARA COUNTY · COMMERCIAL SUBMARKETS</text>
         </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLAZA / LAGOON SPOTLIGHT -->
+<section class="spotlight-section">
+  <div class="spotlight-inner">
+    <p class="section-label">Available Now</p>
+    <h2 class="section-title">Featured Properties &amp; Emerging Districts</h2>
+    <p class="section-intro">A closer look at two of Santa Barbara's most active commercial pockets — one an established mixed-use center, the other a fast-evolving creative district.</p>
+
+    <div class="spotlight-grid">
+
+      <!-- Plaza Commercial Center -->
+      <div class="spotlight-card">
+        <div class="spotlight-img-wrap">
+          <img src="../plazacommercial.png" alt="Plaza Commercial Center Santa Barbara" class="spotlight-img"/>
+        </div>
+        <div class="spotlight-card-body">
+          <p class="spotlight-eyebrow">Office &amp; Retail · Santa Barbara</p>
+          <h3>Plaza Commercial Center</h3>
+          <p>An established mixed-use commercial destination in the heart of Santa Barbara, Plaza Commercial Center offers a range of office and retail spaces suited to businesses of varying sizes. The center benefits from strong visibility, ample parking, and proximity to the city's core commercial corridors.</p>
+          <p>Space is currently available. If you're exploring options in the Santa Barbara market, I'm happy to walk you through what's on offer and help you evaluate fit — at no cost to you.</p>
+          <a href="https://www.plazacommercialcenter.com" target="_blank" rel="noopener" class="spotlight-link">Visit plazacommercialcenter.com →</a>
+        </div>
+      </div>
+
+      <!-- Lagoon / Lagunita District -->
+      <div class="spotlight-card spotlight-card-alt">
+        <div class="spotlight-card-body">
+          <p class="spotlight-eyebrow">Mixed-Use · Eastside Santa Barbara</p>
+          <h3>The Lagoon District</h3>
+          <p>Bounded by Garden, Cota, Milpas, and Anacapa streets, the Lagoon District — named for the nearby Laguna Street — has quietly become one of Santa Barbara's most compelling commercial neighborhoods. Once known for light industrial and warehouse uses, the area now blends creative offices, breweries, specialty food producers, and boutique retail within the same eclectic blocks.</p>
+          <p>Property values and rents have risen steadily as the district has established its own identity. It offers a lower-cost, higher-character alternative to State Street, with a tenant mix that skews toward independent operators, design firms, and food and beverage concepts. Deals here move quickly and often don't reach public listings — making early market engagement especially valuable.</p>
+          <div class="spotlight-tags">
+            <span class="spotlight-tag">Creative Office</span>
+            <span class="spotlight-tag">Light Industrial</span>
+            <span class="spotlight-tag">Food &amp; Beverage</span>
+            <span class="spotlight-tag">Boutique Retail</span>
+          </div>
+        </div>
       </div>
 
     </div>
