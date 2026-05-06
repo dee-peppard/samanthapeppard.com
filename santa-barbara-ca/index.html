@@ -297,6 +297,47 @@ section { padding: 6rem 3rem; }
   transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ── TENANT REP BAND ── */
+.tenrep-band {
+  background: var(--accent);
+  padding: 5rem 3rem;
+}
+.tenrep-band-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 4rem;
+}
+.tenrep-band-text { max-width: 640px; }
+.tenrep-band-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: 300; line-height: 1.2;
+  color: var(--paper); margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+.tenrep-band-text h2 em {
+  font-style: italic; color: var(--gold-light);
+}
+.tenrep-band-text p {
+  font-size: 1.05rem; font-weight: 300;
+  color: rgba(245,242,237,0.65); line-height: 1.75;
+}
+.tenrep-band-cta {
+  display: inline-block; flex-shrink: 0;
+  font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: var(--font-body); font-weight: 400;
+  color: var(--ink); background: var(--gold);
+  padding: 1.1rem 2.2rem; text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+.tenrep-band-cta:hover { background: var(--gold-light); }
+
+@media (max-width: 768px) {
+  .tenrep-band-inner { flex-direction: column; gap: 2.5rem; }
+  .tenrep-band-cta { align-self: flex-start; }
+}
+
 /* ── SVG MAP ── */
 .map-section { background: var(--paper); }
 .map-inner { max-width: 1100px; margin: 0 auto; }
@@ -732,6 +773,18 @@ footer {
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TENANT REP CALLOUT -->
+<section class="tenrep-band">
+  <div class="tenrep-band-inner">
+    <div class="tenrep-band-text">
+      <p class="section-label" style="color:var(--gold);">Tenant &amp; Buyer Representation</p>
+      <h2>Looking for space in Santa Barbara? <em>I work exclusively for you.</em></h2>
+      <p>Whether you're searching for office, retail, or industrial space, I represent tenants and buyers only — never landlords. That means no conflicts, no split loyalties, and no cost to you. From the first site tour through lease execution, your interests come first.</p>
+    </div>
+    <a href="https://samanthapeppard.com/tenant-rep" class="tenrep-band-cta">Learn About Tenant Representation →</a>
   </div>
 </section>
 
