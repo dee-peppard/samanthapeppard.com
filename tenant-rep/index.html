@@ -412,6 +412,75 @@ section { padding: 7rem 3rem; }
   font-weight: 300;
 }
 
+/* ── MARKET REPORTS BAND ── */
+.market-reports-band {
+  background: var(--warm-white);
+  padding: 6rem 3rem;
+  border-top: 1px solid var(--divider);
+}
+.market-reports-inner { max-width: 1100px; margin: 0 auto; }
+.market-reports-eyebrow {
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.market-reports-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300; color: var(--ink);
+  margin-bottom: 1rem; line-height: 1.2;
+}
+.market-reports-intro {
+  font-size: 1rem; color: var(--slate);
+  font-weight: 300; line-height: 1.75;
+  max-width: 560px; margin-bottom: 3rem;
+}
+.market-reports-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.market-report-card {
+  display: block;
+  padding: 2.5rem;
+  background: var(--paper);
+  border: 1px solid var(--divider);
+  text-decoration: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.market-report-card:hover {
+  border-color: rgba(184,150,90,0.4);
+  box-shadow: 0 4px 24px rgba(10,10,10,0.06);
+}
+.market-report-card-label {
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.75rem;
+}
+.market-report-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem; font-weight: 300;
+  color: var(--ink); margin-bottom: 1rem;
+  line-height: 1.2; letter-spacing: 0.01em;
+}
+.market-report-card p {
+  font-size: 0.9rem; color: var(--slate);
+  line-height: 1.8; margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.market-report-card-link {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); font-weight: 400;
+  border-bottom: 1px solid rgba(184,150,90,0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.market-report-card:hover .market-report-card-link { border-color: var(--gold); }
+@media (max-width: 768px) {
+  .market-reports-grid { grid-template-columns: 1fr; }
+  .market-reports-band { padding: 4rem 1.5rem; }
+}
+
 /* ── CTA ── */
 .cta-section { background: var(--ink); color: var(--paper); text-align: center; padding: 7rem 3rem; }
 .cta-section .section-tag { color: var(--gold-light); display: block; margin-bottom: 1rem; }
@@ -798,6 +867,29 @@ footer {
           <p>Priority access to adjacent space as your business grows, so you can scale within your building without disruption or a competitive bidding process.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET REPORTS BAND -->
+<section class="market-reports-band">
+  <div class="market-reports-inner">
+    <p class="market-reports-eyebrow">Market Intelligence</p>
+    <h2 class="market-reports-title">Explore Current Market Conditions</h2>
+    <p class="market-reports-intro">Staying informed is part of negotiating well. Browse the latest quarterly data for the markets where I'm most active.</p>
+    <div class="market-reports-grid">
+      <a href="https://samanthapeppard.com/new-york" class="market-report-card">
+        <p class="market-report-card-label">New York City · Q1 2026</p>
+        <h3>Manhattan &amp; Brooklyn<br>Office &amp; Retail</h3>
+        <p>Historic leasing volume. Availability at its lowest since 2020. Submarket-by-submarket breakdown across Manhattan office and retail corridors, plus Brooklyn.</p>
+        <span class="market-report-card-link">View NYC Market Report →</span>
+      </a>
+      <a href="https://samanthapeppard.com/santa-barbara-ca" class="market-report-card">
+        <p class="market-report-card-label">Santa Barbara · Q1 2026</p>
+        <h3>Office, Retail<br>&amp; Industrial</h3>
+        <p>Near-record-low vacancy across all asset classes. Tight industrial supply, premium retail corridors, and an office market at its strongest since 2022.</p>
+        <span class="market-report-card-link">View Santa Barbara Market Report →</span>
+      </a>
     </div>
   </div>
 </section>
